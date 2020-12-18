@@ -16,9 +16,8 @@ function Phrase(content) {
   this.processor = function(string) {
     return string.toLowerCase();
   }
+
   // Returns true for palindrome, false otherwise
-
-
   this.palindrome = function palindrome() {
     return this.processedContent() === this.processedContent().reverse();
   }
