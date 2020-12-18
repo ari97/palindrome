@@ -12,13 +12,9 @@ String.prototype.reverse = function() {
 function Phrase(content) {
   this.content = content;
 
-
-  this.processor = function(string) {
-    return string.toLowerCase();
-  }
-
-  this.letters = function(){
-    return this.content
+  //Returns only the letters of my content
+  this.letters = function letters(){
+    return (this.content.match(/[a-zA-z]/gm) || []).join("");
   }
 
   // Returns true for palindrome, false otherwise
@@ -28,7 +24,7 @@ function Phrase(content) {
 
   //Return content processed for palindrome testing.
   this.processedContent = function processedContent() {
-    return this.processor(this.content);
+    return this.letters().toLowerCase();
   }
 
   //Returns a louder (all caps) version of content

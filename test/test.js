@@ -36,7 +36,7 @@ describe("Phrase", function() {
   describe("#letters", function() {
     it("should only return letters", function() {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
-      assert.strictEqual("MadamImAdam", punctuatedPalindrome.letters());
+      assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
     });
 
 
